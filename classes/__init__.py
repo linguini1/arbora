@@ -96,6 +96,9 @@ class Plant:
 
         self.age += 1  # Increase age
 
+        if self.age >= self.lifespan:
+            self.alive = False
+
     def reset_fertility(self):
 
         """Resets the plant's seed clock and fertility status after a batch of seeds are planted."""

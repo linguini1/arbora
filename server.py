@@ -34,8 +34,6 @@ forest = Forest(
 def increment():
     global forest
     forest.increment(request.json["month"])
-    for row in forest.map:
-        print_row(row)
     return forest.json()
 
 
