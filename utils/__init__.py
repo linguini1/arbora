@@ -4,10 +4,13 @@ __author__ = "Matteo Golin"
 # Imports
 import csv
 import typing
-from classes import Plant, DataRange
+from os import listdir
+from os.path import isfile, join
+from classes import Plant, Environment, DataRange
 
 # Constants
 PLANTS_CSV = "./resources/plants.csv"
+ENVIRONMENTS = "./resources/environments"
 
 
 # Functions
@@ -76,3 +79,43 @@ def load_plants_from_csv() -> list[Plant]:
             plant_lib.append(plant_obj)
 
     return plant_lib
+
+
+def load_environments_from_csv() -> dict[str, Environment]:
+
+    """Returns a dictionary where keys of environment names are mapped to Environment objects."""
+
+    # Find all environment csv files in the environments directory
+    environment_files = []
+    for file in listdir(ENVIRONMENTS):
+        file_path = join(ENVIRONMENTS, file)
+        if isfile(file_path):
+            environment_files.append(file)
+
+    # Store environments in dictionary
+    env_dict = {}
+    for env in environment_files:
+
+        temperatures = []  # Storage for monthly temperature
+        precipitation = []  # Storage for monthly precipitation
+        name = env.split(".")[0]  # Remove file extension
+
+        # Read each environment csv
+        with open(f"{ENVIRONMENTS}/{env}", 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip headers
+            for row in reader:
+                temperatures.append(int(row[1]))
+                precipitation.append(float(row[2]))
+
+            # Create Environment object
+            environment = Environment(
+                name=name,
+                temperatures=temperatures,
+                precipitation=precipitation,
+            )
+
+            # Add Environment object to dict
+            env_dict.update({name: environment})
+
+    return env_dict
