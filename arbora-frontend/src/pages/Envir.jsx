@@ -19,8 +19,10 @@ export default function Envir() {
 
   return (
     <main id="Envir">
-      <h1>Envinomentr</h1>
-      <h3>Input an envinroment into the simulation</h3>
+      <h1>Envirnoment</h1>
+      <h3>Input an envirnoment into the simulation</h3>
+      <h2>Temperature</h2>
+      <h2>Percipitation</h2>
 
       <form onSubmit={handleSubmit}>
         <div id = "Month1">
@@ -33,7 +35,7 @@ export default function Envir() {
             />
             <input 
             type="text"
-            name = "Percip1"
+            name = "percip1"
             value = {inputs.percip1 || ""}
             onChange = {handleChange}
             />
@@ -50,7 +52,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip2"
+            name = "percip2"
             value = {inputs.percip2|| ""}
             onChange= {handleChange}
             />
@@ -67,7 +69,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip3"
+            name = "percip3"
             value = {inputs.percip3|| ""}
             onChange= {handleChange}
             />
@@ -84,7 +86,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip4"
+            name = "percip4"
 
             value = {inputs.percip4|| ""}
             onChange= {handleChange}
@@ -102,7 +104,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip5"
+            name = "percip5"
             value = {inputs.percip5|| ""}
             onChange= {handleChange}
             />
@@ -119,7 +121,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip6"
+            name = "percip6"
             value = {inputs.percip6|| ""}
             onChange= {handleChange}
             />
@@ -136,7 +138,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip7"
+            name = "percip7"
             value = {inputs.percip7|| ""}
             onChange= {handleChange}
             />
@@ -153,7 +155,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip8"
+            name = "percip8"
             value = {inputs.percip8|| ""}
             onChange= {handleChange}
             />
@@ -170,7 +172,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip9"
+            name = "percip9"
             value = {inputs.percip9|| ""}
             onChange= {handleChange}
             />
@@ -187,7 +189,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip10"
+            name = "percip10"
             value = {inputs.percip10|| ""}
             onChange= {handleChange}
             />
@@ -204,7 +206,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip11"
+            name = "percip11"
             value = {inputs.percip11|| ""}
             onChange= {handleChange}
             />
@@ -221,7 +223,7 @@ export default function Envir() {
             />
             <input
             type="text"
-            name = "Percip12"
+            name = "percip12"
             value = {inputs.percip12|| ""}
             onChange= {handleChange}
             />

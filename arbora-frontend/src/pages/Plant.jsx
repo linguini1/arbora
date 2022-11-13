@@ -1,6 +1,6 @@
 import React from "react";
 import {useRef, useState} from "react";
-import "./Plant.css";
+//import "./Plant.css";
 
 
 export default function Plant() {
@@ -25,6 +25,7 @@ export default function Plant() {
     <main id="plant">
       <h1>Plant</h1>
       <h3>Input an plant into the simulation</h3>
+
       <form onSubmit={handleSubmit}>
         <div id = "type">
             <label> Plant type:
