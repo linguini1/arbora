@@ -27,7 +27,6 @@ class Forest:
         area = self.width * self.height
         num_plants = len(self.plants)
         of_each = int(0.1 * area) // num_plants  # How many of each plant
-        print(area, num_plants, of_each)
 
         # Generate unique points to accommodate each plant type
         points = generate_unique_points(0, self.width -1, 0, self.height - 1, num_plants * of_each)
@@ -79,3 +78,18 @@ class Forest:
 
                         # Grow plant
                         plant.grow(temperature, precipitation)
+
+    def json(self) -> dict:
+
+        """Returns one dimensional array representation of forest."""
+
+        representation = []
+        for y in range(self.height):
+            for x in range(self.width):
+                plant = self.map[y][x]
+                if plant:
+                    representation.append(plant.json())
+                else:
+                    representation.append(None)
+
+        return {"forest": representation}

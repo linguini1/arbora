@@ -106,6 +106,16 @@ class Plant:
     def __repr__(self):
         return f"{self.name}"
 
+    def json(self) -> dict:
+
+        """Returns JSON representation of a plant."""
+
+        return {
+            "name": self.name,
+            "type": self.type,
+            "growth": round(self.height / self.max_height, 2) * 100
+        }
+
 
 # Environment class
 @dataclass

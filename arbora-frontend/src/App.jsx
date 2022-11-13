@@ -19,16 +19,13 @@ function App() {
     <div id="App">
       <Navbar>
         <PageLink to="/">Home</PageLink>
-        <PageLink to = "/plant">Plant</PageLink>
-        <PageLink to = "/envir">Envirnoment</PageLink>
+        <PageLink to="/plant">Plant</PageLink>
+        <PageLink to="/envir">Environment</PageLink>
       </Navbar>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/plant" element={<Plant />}></Route>
         <Route path="/envir" element={<Envir />}></Route>
-
-
-        
       </Routes>
     </div>
   );
