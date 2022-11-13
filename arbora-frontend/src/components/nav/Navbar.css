@@ -1,0 +1,47 @@
+ 
+  /* Basic styles */
+  nav {
+    padding: var(--top-pad) var(--side-pad);
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #arbora-info {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  #sub-info {
+    margin-left: 1rem;
+  }
+  
+  #sub-info div {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: baseline;
+  }
+  
+  
+  
+  /* #sub-info > p {
+    font-size: 0.6rem;
+  } */
+  
+  #org {
+    font-size: 2rem;
+  }
+  
+  /* Logo image */
+  
+  #logo img {
+    object-fit: contain;
+    height: 4rem;
+  }
+  
+
+  
