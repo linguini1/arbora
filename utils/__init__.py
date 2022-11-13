@@ -5,6 +5,7 @@ __author__ = "Matteo Golin"
 import csv
 import typing
 from os import listdir
+import random
 from os.path import isfile, join
 from classes import Plant, Environment, DataRange
 
@@ -25,10 +26,13 @@ def parse_temperature(temperature_range: str) -> DataRange:
 
 def parse_precipitation(precip_range: str) -> DataRange:
 
-    """Returns the temperature range string as a tuple of the minimum and maximum values."""
+    """
+    Returns the temperature range string as a tuple of the minimum and maximum values scaled to
+    precipitation per month.
+    """
 
     data_range = precip_range.split("-")
-    return int(data_range[0]), int(data_range[1])
+    return int(data_range[0]) // 12, int(data_range[1]) // 12
 
 
 def create_plant(plant_dict: PlantDict) -> Plant:
@@ -44,7 +48,7 @@ def create_plant(plant_dict: PlantDict) -> Plant:
         precip_pref=parse_precipitation(plant_dict["Precipitation Preference"]),
         temp_pref=parse_temperature(plant_dict["Temperature Preference"]),
         seeds_produced=int(plant_dict["Seeds produced"]),
-        seed_radius=float(plant_dict["Seed radius"]),
+        seed_radius=int(float(plant_dict["Seed radius"])),
         seed_production=float(plant_dict["Seed production time"]),
         lifespan=int(plant_dict["Lifespan"]),
     )
@@ -119,3 +123,22 @@ def load_environments_from_csv() -> dict[str, Environment]:
             env_dict.update({name: environment})
 
     return env_dict
+
+
+def generate_unique_points(x1: int, x2: int, y1: int, y2: int, n: int) -> list[tuple[int, int]]:
+
+    """Returns a list of n unique (x, y) coordinate pairs within the specified x and y range."""
+
+    # Generate enough unique points so of_each number of each plant can be added
+    points = set(
+        (
+            random.randint(x1, x2),
+            random.randint(y1, y2)
+        ) for _ in range(n)
+    )
+
+    # Continue creating points until enough are made
+    while len(points) < n:
+        points.add((random.randint(x1, x2), random.randint(y1, y2)))
+
+    return list(points)

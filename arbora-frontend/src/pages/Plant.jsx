@@ -22,8 +22,8 @@ export default function Plant() {
   
   return (
     <main id="plant">
-      <h1>Plant: Input an plant into the simulation</h1>
-    
+      <h1>Plant</h1>
+      <h3>Input an plant into the simulation</h3>
       <form onSubmit={handleSubmit}>
         <div id="wrapper1">
           <div id = "type">
