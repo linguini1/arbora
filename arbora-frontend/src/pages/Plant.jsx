@@ -25,7 +25,7 @@ export default function Plant() {
       <h1>Plant</h1>
       <h3>Input an plant into the simulation</h3>
       <form onSubmit={handleSubmit}>
-        <div id="wrapper1">
+        
           <div id = "type">
               <label> Plant type:
               <input 
@@ -128,7 +128,7 @@ export default function Plant() {
           </label>
         </div>
         <input type="submit" />
-        </div>
+        
 
 
       </form>
