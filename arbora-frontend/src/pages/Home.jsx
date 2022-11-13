@@ -39,8 +39,10 @@ export default function Home() {
   return (
     <main id="home">
       <h1>Home</h1>
-      <button onClick={start_sim}>Start</button>
-      <button onClick={increment}>Increment</button>
+      <div id="buttons">
+        <button onClick={start_sim}>Start</button>
+        <button onClick={increment}>Increment</button>
+      </div>
       <canvas id="forest"></canvas>
     </main>
   );
