@@ -1,5 +1,6 @@
 import React from "react";
 import {useRef, useState} from "react";
+import "./Plant.css";
 
 export default function Plant() {
   
@@ -21,42 +22,45 @@ export default function Plant() {
   
   return (
     <main id="plant">
-      <h1>Plant</h1>
-      <h3>Input an plant into the simulation</h3>
+      <h1>Plant: Input an plant into the simulation</h1>
+    
       <form onSubmit={handleSubmit}>
-        <div id = "type">
-            <label> Plant type:
-            <input 
-            type="text"
-            name = "plantType"
-            value = {inputs.plantType || ""}
-            onChange = {handleChange}
-            />
-            </label>
-        </div>
+        <div id="wrapper1">
+          <div id = "type">
+              <label> Plant type:
+              <input 
+              type="text"
+              name = "plantType"
+              value = {inputs.plantType || ""}
+              onChange = {handleChange}
+              />
+              </label>
+          </div>
 
-        <div id = "name">
-            <label> Growth Rate
-            <input 
-            type="text"
-            name = "growthRate"
-            value = {inputs.growthRate || ""}
-            onChange = {handleChange}
-            />
-            </label>
-        </div>
+          <div id = "name">
+              <label> Growth Rate
+              <input 
+              type="text"
+              name = "growthRate"
+              value = {inputs.growthRate || ""}
+              onChange = {handleChange}
+              />
+              </label>
+          </div>
 
-        <div id = "max">
+          <div id = "max">
 
-            <label> Max Height
-            <input 
-            type="text"
-            name = "maxHeight"
-            value = {inputs.maxHeight|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-        </div>
+              <label> Max Height
+              <input 
+              type="text"
+              name = "maxHeight"
+              value = {inputs.maxHeight|| ""}
+              onChange= {handleChange}
+              />
+              </label>
+          </div>
+        
+        
 
         <div id = "Shade">
             <label> Shade Tolerance
@@ -124,6 +128,7 @@ export default function Plant() {
           </label>
         </div>
         <input type="submit" />
+        </div>
 
 
       </form>

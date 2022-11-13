@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Envir.css";
 export default function Envir() {
   return (
     <main id="Envir">
