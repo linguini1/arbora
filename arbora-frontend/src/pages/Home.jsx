@@ -32,6 +32,7 @@ export default function Home() {
       .then((response) => response.json())
       .then((raw_data) => setData(raw_data));
     setMonth((month) => month + 1);
+    console.log(data);
   }
 
   useEffect(() => {}, [data]);
