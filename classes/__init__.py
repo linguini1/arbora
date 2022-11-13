@@ -54,7 +54,7 @@ class Plant:
         pass
 
     def __repr__(self):
-        return f"Plant(name={self.name}, type={self.type}, growth_rate={self.growth_rate})"
+        return f"{self.name}"
 
 
 # Environment class
