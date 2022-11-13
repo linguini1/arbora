@@ -11,6 +11,7 @@ from classes import Plant, Environment, DataRange
 # Constants
 PLANTS_CSV = "./resources/plants.csv"
 ENVIRONMENTS = "./resources/environments"
+PlantDict = dict[str, typing.Any]
 
 
 # Functions
@@ -30,7 +31,7 @@ def parse_precipitation(precip_range: str) -> DataRange:
     return int(data_range[0]), int(data_range[1])
 
 
-def create_plant(plant_dict: dict[str, typing.Any]) -> Plant:
+def create_plant(plant_dict: PlantDict) -> Plant:
 
     """Returns a plant object created from a CSV row."""
 
@@ -49,7 +50,7 @@ def create_plant(plant_dict: dict[str, typing.Any]) -> Plant:
     )
 
 
-def row_to_dict(plant_csv_row: list[str], headers: list[str]) -> dict[str, typing.Any]:
+def row_to_dict(plant_csv_row: list[str], headers: list[str]) -> PlantDict:
 
     """
     Returns the CSV row converted to a dictionary object where the column header is the key and
@@ -65,7 +66,7 @@ def row_to_dict(plant_csv_row: list[str], headers: list[str]) -> dict[str, typin
     return row_dict
 
 
-def load_plants_from_csv() -> list[Plant]:
+def load_plants_from_csv() -> list[PlantDict]:
 
     """Returns a list of plant objects created from the plant database stored in a CSV file."""
 
@@ -75,8 +76,7 @@ def load_plants_from_csv() -> list[Plant]:
         headers = next(plants)  # Skip the header line
         for plant in plants:
             plant_dict = row_to_dict(plant, headers)
-            plant_obj = create_plant(plant_dict)
-            plant_lib.append(plant_obj)
+            plant_lib.append(plant_dict)
 
     return plant_lib
 
