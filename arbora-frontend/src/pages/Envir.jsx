@@ -19,10 +19,13 @@ export default function Envir() {
 
   return (
     <main id="Envir">
-      <h1>Envirnoment</h1>
-      <h3>Input an envirnoment into the simulation</h3>
-      <h2>Temperature</h2>
-      <h2>Percipitation</h2>
+      <h1>Environment</h1>
+      <h3>Input an environment into the simulation</h3>
+      <div id='wrapper1'>
+        <h2>Temperature</h2>
+        <h2>Precipitation</h2>
+      </div>
+      
 
       <form onSubmit={handleSubmit}>
         <div id = "Month1">
@@ -43,7 +46,7 @@ export default function Envir() {
         </div>
             
         <div id = "Month 2">
-            <label> Month 2;
+            <label> Month 2:
             <input 
             type="text"
             name = "temp2"
@@ -60,7 +63,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 3">
-            <label> Month 3;
+            <label> Month 3:
             <input 
             type="text"
             name = "temp3"
@@ -77,7 +80,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 4">
-            <label> Month 4;
+            <label> Month 4:
             <input 
             type="text"
             name = "temp4"
@@ -95,7 +98,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 5">
-            <label> Month 5;
+            <label> Month 5:
             <input 
             type="text"
             name = "temp5"
@@ -112,7 +115,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 6">
-            <label> Month 6;
+            <label> Month 6:
             <input 
             type="text"
             name = "temp6"
@@ -129,7 +132,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 7">
-            <label> Month 7;
+            <label> Month 7:
             <input 
             type="text"
             name = "temp7"
@@ -146,7 +149,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 8">
-            <label> Month 8;
+            <label> Month 8:
             <input 
             type="text"
             name = "temp8"
@@ -163,7 +166,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 9">
-            <label> Month 9;
+            <label> Month 9:
             <input 
             type="text"
             name = "temp9"
@@ -180,7 +183,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 10">
-            <label> Month 10;
+            <label> Month 10:
             <input 
             type="text"
             name = "temp10"
@@ -197,7 +200,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 11">
-            <label> Month 11;
+            <label> Month 11:
             <input 
             type="text"
             name = "temp11"
@@ -214,7 +217,7 @@ export default function Envir() {
         </div>
 
         <div id = "Month 12">
-            <label> Month 12;
+            <label> Month 12:
             <input 
             type="text"
             name = "temp12"
