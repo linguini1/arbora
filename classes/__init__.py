@@ -21,7 +21,7 @@ class Plant:
     Temperature preference is in degrees celsius.
     Seed radius is in metres.
     Seed production time is in years.
-    Lifespan is in years.
+    Lifespan is assigned in years and given in months.
     """
 
     def __init__(
@@ -48,13 +48,14 @@ class Plant:
         self.seeds_produced: int = seeds_produced
         self.seed_radius: float = seed_radius
         self.seed_production: float = seed_production
-        self.lifespan: int = lifespan
+        self.lifespan: int = lifespan * 12  # In months
 
     def grow(self) -> None:
         pass
 
     def __repr__(self):
         return f"Plant(name={self.name}, type={self.type}, growth_rate={self.growth_rate})"
+
 
 # Environment class
 @dataclass
