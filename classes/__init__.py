@@ -42,7 +42,7 @@ class Plant:
         # Data from file
         self.type: str = plant_type
         self.name: str = name
-        self.growth_rate: float = max_height/12 * (lifespan - seed_production - 1)
+        self.growth_rate: float = max_height / 12 * (lifespan - seed_production - 1)
         self.max_height: float = max_height
         self.shade_tol: float = shade_tol
         self.precip_pref: DataRange = precip_pref
