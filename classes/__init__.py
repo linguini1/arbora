@@ -34,7 +34,7 @@ class Plant:
             precip_pref: DataRange,
             temp_pref: DataRange,
             seeds_produced: int,
-            seed_radius: float,
+            seed_radius: int,
             seed_production: float,
             lifespan: int,
     ):
@@ -42,13 +42,13 @@ class Plant:
         # Data from file
         self.type: str = plant_type
         self.name: str = name
-        self.growth_rate: float = max_height / 12 * (lifespan - seed_production - 1)
+        self.growth_rate: float = max_height / 12 * (lifespan - seed_production * 0.8)
         self.max_height: float = max_height
         self.shade_tol: float = shade_tol
         self.precip_pref: DataRange = precip_pref
         self.temp_pref: DataRange = temp_pref
         self.seeds_produced: int = seeds_produced
-        self.seed_radius: float = seed_radius
+        self.seed_radius: int = seed_radius
         self.seed_production: float = seed_production
         self.lifespan: int = lifespan * 12  # In months
 
@@ -71,7 +71,7 @@ class Plant:
 
             # How much out of range is the temperature
             out_of_range = max(self.temp_pref[0] - temperature, temperature - self.temp_pref[1])
-            if out_of_range >= 3:  # 3 degree tolerance
+            if out_of_range >= 4:  # Temperature tolerance
                 self.alive = False  # Plant dies
 
         # Reduce GR if precipitation is not in preferred range
@@ -80,7 +80,7 @@ class Plant:
 
             # How much out of range is the precipitation
             out_of_range = max(self.precip_pref[0] - precipitation, precipitation - self.precip_pref[1])
-            if out_of_range >= 41:  # 41mm tolerance
+            if out_of_range >= 41:  # Precipitation tolerance
                 self.alive = False
 
         # Don't grow past max height
