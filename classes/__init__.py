@@ -2,6 +2,7 @@
 __author__ = "Matteo Golin"
 
 # Imports
+from dataclasses import dataclass
 
 # Constants
 DataRange = tuple[int, int]
@@ -54,3 +55,11 @@ class Plant:
 
     def __repr__(self):
         return f"Plant(name={self.name}, type={self.type}, growth_rate={self.growth_rate})"
+
+# Environment class
+@dataclass
+class Environment:
+
+    name: str
+    temperatures: list[int]
+    precipitation: list[float]
