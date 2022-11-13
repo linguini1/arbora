@@ -9,7 +9,7 @@
 /arbora-frontend/coverage
 
 # production
-/arbora-frontend/build
+# /arbora-frontend/build
 
 # misc
 .DS_Store
