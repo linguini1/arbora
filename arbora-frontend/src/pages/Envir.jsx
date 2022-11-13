@@ -23,7 +23,7 @@ export default function Envir() {
       <h3>Input an envinroment into the simulation</h3>
 
       <form onSubmit={handleSubmit}>
-        <div id = "Temperature">
+        <div id = "Month1">
             <label> Month 1:
             <input 
             type="text"
@@ -31,91 +31,203 @@ export default function Envir() {
             value = {inputs.temp1 || ""}
             onChange = {handleChange}
             />
-            </label>
-
-            <label> Growth Rate
             <input 
             type="text"
-            name = "growthRate"
-            value = {inputs.growthRate || ""}
+            name = "Percip1"
+            value = {inputs.percip1 || ""}
             onChange = {handleChange}
             />
             </label>
         </div>
-
-        <div id = "Percip">
-            <label> Growth Rate
+            
+        <div id = "Month 2">
+            <label> Month 2;
             <input 
             type="text"
-            name = "growthRate"
-            value = {inputs.growthRate || ""}
+            name = "temp2"
+            value = {inputs.temp2 || ""}
             onChange = {handleChange}
             />
-            </label>
-
-            <label> Max Height
-            <input 
+            <input
             type="text"
-            name = "maxHeight"
-            value = {inputs.maxHeight|| ""}
+            name = "Percip2"
+            value = {inputs.percip2|| ""}
             onChange= {handleChange}
             />
             </label>
-
-            <label> Shade Tolerance
-            <input 
-            type="text"
-            name = "shadeTol"
-            value = {inputs.shadeTol|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-
-            <label> Ideal Percipitation
-            <input 
-            type="text"
-            name = "percip"
-            value = {inputs.percip|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-
-            <label> Ideal Temperature
-            <input 
-            type="text"
-            name = "temp"
-            value = {inputs.temp|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-
-            <label> Seeds Produced
-            <input 
-            type="text"
-            name = "seedsProduced"
-            value = {inputs.seedProduced|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-
-            <label> Seeds Production
-            <input 
-            type="text"
-            name = "sedsProduction"
-            value = {inputs.seedProduction|| ""}
-            onChange= {handleChange}
-            />
-            </label>
-
-            <label> Life Span
-            <input 
-            type="text"
-            name = "lifeSpan"
-            value = {inputs.LifeSpan|| ""}
-            onChange= {handleChange}
-            />
-          </label>
         </div>
+
+        <div id = "Month 3">
+            <label> Month 3;
+            <input 
+            type="text"
+            name = "temp3"
+            value = {inputs.temp3 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip3"
+            value = {inputs.percip3|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 4">
+            <label> Month 4;
+            <input 
+            type="text"
+            name = "temp4"
+            value = {inputs.temp4 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip4"
+
+            value = {inputs.percip4|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 5">
+            <label> Month 5;
+            <input 
+            type="text"
+            name = "temp5"
+            value = {inputs.temp5 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip5"
+            value = {inputs.percip5|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 6">
+            <label> Month 6;
+            <input 
+            type="text"
+            name = "temp6"
+            value = {inputs.temp6 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip6"
+            value = {inputs.percip6|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 7">
+            <label> Month 7;
+            <input 
+            type="text"
+            name = "temp7"
+            value = {inputs.temp7 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip7"
+            value = {inputs.percip7|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 8">
+            <label> Month 8;
+            <input 
+            type="text"
+            name = "temp8"
+            value = {inputs.temp8 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip8"
+            value = {inputs.percip8|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 9">
+            <label> Month 9;
+            <input 
+            type="text"
+            name = "temp9"
+            value = {inputs.temp9 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip9"
+            value = {inputs.percip9|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 10">
+            <label> Month 10;
+            <input 
+            type="text"
+            name = "temp10"
+            value = {inputs.temp10 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip10"
+            value = {inputs.percip10|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 11">
+            <label> Month 11;
+            <input 
+            type="text"
+            name = "temp11"
+            value = {inputs.temp11 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip11"
+            value = {inputs.percip11|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
+        <div id = "Month 12">
+            <label> Month 12;
+            <input 
+            type="text"
+            name = "temp12"
+            value = {inputs.temp12 || ""}
+            onChange = {handleChange}
+            />
+            <input
+            type="text"
+            name = "Percip12"
+            value = {inputs.percip12|| ""}
+            onChange= {handleChange}
+            />
+            </label>
+        </div>
+
         <input type="submit" />
 
 
