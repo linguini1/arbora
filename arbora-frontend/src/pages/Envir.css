@@ -1,3 +1,9 @@
 #Envir h1{
     font-size: 20px;
 }
+
+#wrapper1 {
+    display: flex;
+    justify-content: center;
+   
+}
