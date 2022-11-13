@@ -1,10 +1,8 @@
-#plant h1{
-    font-size: 20px;
+#plant h1 {
+  font-size: 20px;
 }
 
-#wrapper1{
-    font-size: 20px;
-    display: flex;
+#wrapper1 {
+  font-size: 20px;
+  display: flex;
 }
-
-
